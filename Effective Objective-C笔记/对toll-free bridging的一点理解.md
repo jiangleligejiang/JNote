@@ -1,5 +1,5 @@
 # 对toll-free bridging的一点理解
-##toll-free bridging的定义
+## toll-free bridging的定义
 
 - Foundation VS CoreFoundation
 
@@ -11,7 +11,7 @@
 
 - [TFB中可以互相转换的类型](https://developer.apple.com/library/archive/documentation/General/Conceptual/CocoaEncyclopedia/Toll-FreeBridgin/Toll-FreeBridgin.html)
 
-##toll-free bridging的使用
+## toll-free bridging的使用
 - __bridge的使用
 
 > __bridge只是单纯地进行OC指针与CF指针之间的转换，不涉及到生命周期管理权的转换。因此，对于OC转换为CF之后，我们不需要在CF指针使用完后进行释放操作，因为它依旧由于OC中的ARC进行管理。同理，对于CF转换为OC之后，我们必须在OC指针使用完之后，对CF进行释放操作，因为CF只能MRC。
@@ -129,7 +129,7 @@ static NSString *const kStringKey = @"kStringKey";
 
 ```
 
-##参考资料
+## 参考资料
 
 - Effective objective-C 
 
