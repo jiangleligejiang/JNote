@@ -85,7 +85,7 @@ static NSString *const kStringKey = @"kStringKey";
 
 - 使用CFMutableDictionary来避免key未实现NSCopying协议
 
-> 我们知道NSMutableDictionary要求key必须实现了NSCopying协议，否则会报错。为了避免出现这种情况，我们可以使用CFMutableDictionary来替换它。其中[YYCache](https://github.com/ibireme/YYCache/blob/master/YYCache/YYMemoryCache.m)中的使用的数据结构就是CFMutableDictionary。
+> 我们知道NSMutableDictionary要求key必须实现了NSCopying协议，否则会报错。为了避免出现这种情况，我们可以使用CFMutableDictionary来替换它。其中[YYCache](https://github.com/ibireme/YYCache/blob/master/YYCache/YYMemoryCache.m)中的YYMemoryCache使用的数据结构就是CFMutableDictionary。
 
 ```objc
 //定义一个未实现NSCopying协议的Key对象
