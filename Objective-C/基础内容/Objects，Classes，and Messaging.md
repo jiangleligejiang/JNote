@@ -24,7 +24,7 @@ typedef struct objc_class *Class;
 
 - Dynamic Typing 
 
-> 在OC中类型是动态可变的，并不会在编译期就决定，可以在动态运行期中进行修改。比如我们的声明对象为id，那么可以通过强制转换为其他类型。当然一些具备继承关系的对象，比如子类对象可以强制转换为父类对象。 
+> 在OC中类型是动态可变的，并不会在编译期就决定，可以在动态运行期中进行修改。比如我们的声明对象为id，那么可以通过强制转换为其他类型。当然还包括一些具备继承关系的对象，比如子类对象可以强制转换为父类对象。 
 
 ### Messaging 
 
@@ -50,7 +50,7 @@ y = [[window contentView] bounds].origin.y;
 
 ``` 
 
-这里有个比较坑的点是```nil```对象去调用OC方法是OK的，但去调用C中的方法却可能会导致Crash。 
+这里有个比较坑的点是```nil```对象去调用OC方法是OK的，但去调用C中的```struct```却可能会导致Crash。 
 
 - Polymorphism 
 
@@ -60,13 +60,13 @@ y = [[window contentView] bounds].origin.y;
 
 - Dynamic Binding 
 
-> 动态绑定即方法的调用是在运行期所决定的，而不是在编译期。真因为有了动态绑定，所以才能支持多态性的实现。 
+> 动态绑定即方法的调用是在运行期所决定的，而不是在编译期。正因为有了动态绑定，所以才能支持多态性的实现。 
 
 ### Classes 
 
 - initializing a method 
 
-> 在实例化一个对象之前，若我们需要做一些额外的操作，通常是一些```swizzle method```等runtime操作，我们便可以在```initialize```方法中处理。 
+> 在实例化一个对象之前，若我们需要做一些额外的操作，我们便可以在```initialize```方法中处理。 
 
 - +load vs +initialize 
 
