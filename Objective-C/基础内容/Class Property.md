@@ -26,6 +26,7 @@
 
 ### 3.synthesize和dynamic
 > ```@synthesize```：如果属性没有手动实现setter和getter方法，编译器会自动加上，一般用于变量重命名。通常对于```@property```等同于```@synthesize var = _var```。
+
 > ```@dynamic```：告诉编译器不用生成setter和getter，由用户实现。
 ```objc
 @interface Person
@@ -40,7 +41,9 @@
 
 ### 4.对象关联
 > a. 使用```@selector()```来作为key
+
 > b. 不管是OC对象还是C类型，都应该使用```OBJC_ASSOCIATION_RETAIN_NONATOMIC```,避免使用```OBJC_ASSOCIATION_ASSIGN```,因为它非常容易被释放而导致获取为nil.
+
 > c. 移除对象时，传入nil值，并使用```OBJC_ASSOCIATION_ASSIGN```
 
 ```objc
